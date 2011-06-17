@@ -5,6 +5,9 @@
     <script src="vendor/jquery-1.6.1.js"></script>
     <script src="vendor/underscore-1.1.6.js"></script>
     <script src="lib/game_of_life.js"></script>
+    <script src="lib/game_of_life.support.js"></script>
+    <script src="lib/game_of_life.generation.js"></script>
+    <script src="lib/game_of_life.graphics.js"></script>
     <script>
       $(function () {
         var zeroGeneration =
@@ -20,7 +23,7 @@
           "............\n" +
           "............\n" +
           "............\n";
-        GameOfLife(zeroGeneration, $('#game_of_life')).evolve();
+        new GameOfLife(zeroGeneration, $('#game_of_life')).evolve();
       });
     </script>
     <style type="text/css">
