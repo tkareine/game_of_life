@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="vendor/jquery-1.6.1.js"></script>
+    <script src="vendor/underscore-1.1.6.js"></script>
+    <script src="lib/game_of_life.js"></script>
+    <script>
+      $(function () {
+        var zeroGeneration =
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "......*.....\n" +
+          ".....**.....\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n";
+        GameOfLife(zeroGeneration, $('#game_of_life')).evolve();
+      });
+    </script>
+    <style type="text/css">
+      body {
+        background-color: white;
+        color: black;
+        font: 12px Helvetica, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        text-align: center;
+        padding: 4px;
+      }
+      #content {
+        margin: auto;
+        padding: 0;
+        width: 480px;
+        height: 480px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: none;
+        border: 1px solid grey;
+      }
+    </style>
+    <title>Game of Life</title>
+  </head>
+  <body>
+    <div id="content">
+      <canvas id="game_of_life" width="480" height="480">
+        Your browser does not support HTML5 Canvas.
+      </canvas>
+      <header>
+        <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>
+      </header>
+    </div>
+  </body>
+</html>
