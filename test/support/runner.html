@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tests | Game of Life</title>
+  <link rel="stylesheet" type="text/css" href="jasmine-1.0.2/jasmine.css">
+  <script src="jasmine-1.0.2/jasmine.js"></script>
+  <script src="jasmine-1.0.2/jasmine-html.js"></script>
+
+  <!-- dependencies -->
+  <script src="../../vendor/jquery-1.6.1.js"></script>
+  <script src="../../vendor/underscore-1.1.6.js"></script>
+
+  <!-- production sources -->
+  <script src="../../lib/game_of_life.js"></script>
+  <script src="../../lib/game_of_life.support.js"></script>
+  <script src="../../lib/game_of_life.generation.js"></script>
+  <script src="../../lib/game_of_life.graphics.js"></script>
+
+  <!-- test sources -->
+  <script src="../unit/game_of_life.support.spec.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+  </script>
+</body>
+</html>
