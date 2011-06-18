@@ -2,30 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script src="vendor/jquery-1.6.1.js"></script>
-    <script src="vendor/underscore-1.1.6.js"></script>
-    <script src="lib/game_of_life.js"></script>
-    <script src="lib/game_of_life.support.js"></script>
-    <script src="lib/game_of_life.generation.js"></script>
-    <script src="lib/game_of_life.graphics.js"></script>
-    <script>
-      $(function () {
-        var zeroGeneration =
-          "............\n" +
-          "...*........\n" +
-          ".*.*........\n" +
-          "..**........\n" +
-          "............\n" +
-          "............\n" +
-          "............\n" +
-          "............\n" +
-          "............\n" +
-          "............\n" +
-          "............\n" +
-          "............\n";
-        GameOfLife(zeroGeneration, $('#game_of_life')).evolve();
-      });
-    </script>
     <style type="text/css">
       body {
         background-color: white;
@@ -63,5 +39,29 @@
         <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>
       </header>
     </div>
+    <script src="vendor/jquery-1.6.1.js"></script>
+    <script src="vendor/underscore-1.1.6.js"></script>
+    <script src="lib/game_of_life.js"></script>
+    <script src="lib/game_of_life.support.js"></script>
+    <script src="lib/game_of_life.generation.js"></script>
+    <script src="lib/game_of_life.graphics.js"></script>
+    <script>
+      $(function () {
+        var zeroGeneration =
+          "............\n" +
+          "...*........\n" +
+          ".*.*........\n" +
+          "..**........\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n" +
+          "............\n";
+        GameOfLife(zeroGeneration, $('#game_of_life')).evolve();
+      });
+    </script>
   </body>
 </html>
