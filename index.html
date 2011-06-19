@@ -2,42 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <style type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bevan">
+    <style>
       body {
         background-color: white;
         color: black;
-        font: 12px Helvetica, Arial, sans-serif;
-        padding: 0;
+        font: 12px sans-serif;
         margin: 0;
-      }
-      header {
+        padding: 0;
         text-align: center;
-        padding: 4px;
       }
       #content {
-        margin: auto;
+        margin: 0 auto;
         padding: 0;
         width: 480px;
-        height: 480px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: none;
-        border: 1px solid grey;
+      }
+      h1, p {
+        margin: 12px;
+        padding: 2px;
+      }
+      h1 {
+        font-family: Bevan, sans-serif;
+        font-size: 24px;
+        text-shadow: 0 -2px #ccc, 2px 0 #ccc, 0 2px #ccc, -2px 0 #ccc;
+      }
+      canvas {
+        border: 1px solid #ccc;
+      }
+      a {
+        color: black;
       }
     </style>
     <title>Game of Life</title>
   </head>
   <body>
     <div id="content">
+      <h1>Game of Life</h1>
       <canvas id="game_of_life" width="480" height="480">
         Your browser does not support HTML5 Canvas.
       </canvas>
-      <header>
-        <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>
-      </header>
+      <p>See <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">the article on Wikipedia</a> for rules.</p>
     </div>
     <script src="vendor/jquery-1.6.1.js"></script>
     <script src="vendor/underscore-1.1.6.js"></script>
