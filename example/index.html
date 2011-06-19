@@ -23,7 +23,7 @@
     <script src="../lib/game_of_life.graphics.js"></script>
     <script>
       $(function () {
-        var zeroGeneration =
+        var seed =
           "..............\n" +
           "...*..........\n" +
           ".*.*..........\n" +
@@ -38,7 +38,7 @@
           "........***...\n" +
           "..............\n" +
           "..............\n";
-        GameOfLife(zeroGeneration, $('#game_of_life')[0]).evolve();
+        GameOfLife(seed, $('#game_of_life')[0]).evolve();
       });
     </script>
   </body>
