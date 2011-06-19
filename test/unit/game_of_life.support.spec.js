@@ -1,6 +1,6 @@
 describe('Support module', function () {
-  var S   = GameOfLife.Support
-    , CT  = S.CellTypes;
+  var S   = GameOfLife.Support,
+      CT  = S.CellTypes;
 
   it('inverts an object', function () {
     var obj = { foo: 1, bar: 2};

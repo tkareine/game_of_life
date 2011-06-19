@@ -1,21 +1,21 @@
 describe('Game of Life', function () {
-  var GoF           = GameOfLife
-    , canvas        = $('<canvas></canvas>')
-    , seed          =
+  var GoF = GameOfLife,
+      canvas = $('<canvas></canvas>'),
+      seed =
         "......\n" +
         "...*..\n" +
         ".***..\n" +
         "......\n" +
-        "......\n"
-    , expectedHaltGeneration = GoF.Support.parseCellGrid(
+        "......\n",
+      expectedHaltGeneration = GoF.Support.parseCellGrid(
         "......\n" +
         "..**..\n" +
         ".*..*.\n" +
         "..**..\n" +
-        "......\n")
-    , expectedNumGenerations = 3
-    , gfxDrawFrameSpy
-    , gof;
+        "......\n"),
+      expectedNumGenerations = 3,
+      gfxDrawFrameSpy,
+      gof;
 
   beforeEach(function () {
     // test the outcome via a spy version of Graphics object
