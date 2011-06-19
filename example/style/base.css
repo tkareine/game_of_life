@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  color: black;
+  font: 12px sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#content {
+  margin: 0 auto;
+  padding: 0;
+  width: 480px;
+}
+h1, p {
+  margin: 12px;
+  padding: 2px;
+}
+h1 {
+  font-family: Bevan, sans-serif;
+  font-size: 24px;
+  text-shadow: 0 -2px #ccc, 2px 0 #ccc, 0 2px #ccc, -2px 0 #ccc;
+}
+canvas {
+  border: 1px solid #ccc;
+}
+a {
+  color: black;
+}
