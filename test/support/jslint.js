@@ -6911,6 +6911,10 @@ klass:              do {
 
     itself.edition = '2011-06-17';
 
+    if (typeof exports !== 'undefined') {
+        exports.JSLINT = itself;
+    }
+
     return itself;
 
 }());
