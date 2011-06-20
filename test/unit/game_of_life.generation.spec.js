@@ -42,28 +42,6 @@ describe('Generation module', function () {
       };
 
   describe('For evolvining the next generation (tick)', function () {
-    it('evolves all dead cells to dead cells', function () {
-      expect(G.tick(Generations.allDead)).toEqual(Generations.allDead);
-    });
-
-    it('evolves a lonely live cell to a dead cell', function () {
-      expect(G.tick(Generations.singleAlive)).toEqual(Generations.allDead);
-    });
-
-    it('evolves cells in block still live formation to the same formation', function () {
-      expect(G.tick(Generations.blockStillLive)).toEqual(Generations.blockStillLive);
-    });
-
-    it('evolves cells in blinker oscillator formation, from horizontal to vertical', function () {
-      expect(G.tick(Generations.blinkerOscillatorHorizontal)).toEqual(Generations.blinkerOscillatorVertical);
-    });
-
-    it('evolves cells in blinker oscillator formation, from vertical to horizontal', function () {
-      expect(G.tick(Generations.blinkerOscillatorVertical)).toEqual(Generations.blinkerOscillatorHorizontal);
-    });
-
-    it('evolves cells in glider spaceship formation, from phase 1 to 2', function () {
-      expect(G.tick(Generations.gliderSpaceshipPhase1)).toEqual(Generations.gliderSpaceshipPhase2);
-    });
+    // TODO: Write more tests
   });
 });
