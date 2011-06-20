@@ -23,7 +23,7 @@ desc 'Make a release by bundling and compressing the sources'
 task :release do
   ensure_tool_is_installed uglify
   srcs = Dir['lib/**/*.js'].sort_by { |src| src.size }
-  Tempfile.open('gof.min.js') do |file|
+  Tempfile.open('gol.min.js') do |file|
     sh %{cat #{srcs.join(' ')} | #{uglify} --unsafe > #{file.path}}
     sh %{sed 's/\\$VERSION/#{version}/' #{file.path} > release/game_of_life.#{version}.min.js}
   end
