@@ -1,4 +1,8 @@
-NODE = 'node'
+node = 'node'
+
+def ensure_tool_is_installed(name)
+  raise "Did not find #{name} in $PATH. Is it installed?" unless system("which #{name}")
+end
 
 desc 'Open the example page'
 task :example do
@@ -7,8 +11,8 @@ end
 
 desc 'Run code quality checks with JSLint'
 task :lint do
-  raise 'You must have Node.js installed' unless system("which #{NODE}")
-  sh %{#{NODE} test/support/jslint-check.js}
+  ensure_tool_is_installed node
+  sh %{#{node} test/support/jslint-check.js}
 end
 
 desc 'Open the test page'
