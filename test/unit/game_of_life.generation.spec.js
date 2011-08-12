@@ -65,7 +65,7 @@ describe('Generation module', function () {
     });
   });
 
-  describe('For evolvining the next generation (tick)', function () {
+  describe('For evolving the next generation (tick)', function () {
     it('evolves all dead cells to dead cells', function () {
       expect(G.tick(Generations.allDead)).toEqual(Generations.allDead);
     });
