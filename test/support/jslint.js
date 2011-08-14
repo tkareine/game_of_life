@@ -6927,10 +6927,11 @@ klass:              do {
 
     itself.edition = '2011-08-06';
 
-    if (typeof exports !== 'undefined') {
-        exports.JSLINT = itself;
-    }
-
     return itself;
 
 }());
+
+// Make JSLint a Node.js module, if possible.
+if (typeof exports === 'object') {
+    exports.JSLINT = JSLINT;
+}
