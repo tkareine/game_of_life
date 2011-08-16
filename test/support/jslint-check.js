@@ -13,7 +13,8 @@ var fs      = require('fs'),
       "'GameOfLife' was used before it was defined.": true,
       "Unexpected dangling '_' in '_'.": true,
       "'_' was used before it was defined.": true,
-      "'setTimeout' was used before it was defined.": true
+      "'setTimeout' was used before it was defined.": true,
+      "'window' was used before it was defined.": true
     },
     jslintOptions = {
       indent: 2,
