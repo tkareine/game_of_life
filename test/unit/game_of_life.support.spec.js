@@ -1,5 +1,6 @@
 describe('Support module', function () {
   var S = GameOfLife.Support;
+  var CT = S.CellTypes;
 
   it('inverts an object', function () {
     var obj = { foo: 1, bar: 2};
@@ -19,6 +20,13 @@ describe('Support module', function () {
   });
 
   describe('For parsing a cell grid', function () {
-    // TODO: Write more tests
+    it('parses simple 1x1 input correctly', function() {
+      expect(S.parseCellGrid('.')).toEqual([[CT.Dead]]);
+      expect(S.parseCellGrid('*')).toEqual([[CT.Alive]]);
+    });
+    it('parses not so simple 2x2 input correctly', function(){
+      expect(S.parseCellGrid('..\n..')).toEqual([[CT.Dead, CT.Dead], [CT.Dead, CT.Dead]]);
+      expect(S.parseCellGrid('..\n*.')).toEqual([[CT.Dead, CT.Dead], [CT.Alive, CT.Dead]])
+    });
   });
 });
