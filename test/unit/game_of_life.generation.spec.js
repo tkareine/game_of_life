@@ -44,6 +44,20 @@ describe('Generation module', function () {
           [ '.', '*', '*', '.', '.' ],
           [ '.', '.', '.', '.', '.' ],
           [ '.', '.', '.', '.', '.' ]
+        ],
+        unboundedWorldPhase1: [
+          [ '.', '.', '.', '.', '.' ],
+          [ '.', '.', '.', '.', '.' ],
+          [ '.', '.', '.', '.', '.' ],
+          [ '.', '.', '.', '.', '.' ],
+          [ '*', '.', '.', '*', '*' ]
+        ],
+        unboundedWorldPhase2: [
+          [ '.', '.', '.', '.', '*' ],
+          [ '.', '.', '.', '.', '.' ],
+          [ '.', '.', '.', '.', '.' ],
+          [ '.', '.', '.', '.', '*' ],
+          [ '.', '.', '.', '.', '*' ]
         ]
       };
 
@@ -94,6 +108,10 @@ describe('Generation module', function () {
 
     it('evolves cells in glider spaceship formation, from phase 1 to 2', function () {
       expect(G.tick(Generations.gliderSpaceshipPhase1)).toEqual(Generations.gliderSpaceshipPhase2);
+    });
+
+    it('considers world is unbounded', function () {
+      expect(G.tick(Generations.unboundedWorldPhase1)).toEqual(Generations.unboundedWorldPhase2);
     });
   });
 });

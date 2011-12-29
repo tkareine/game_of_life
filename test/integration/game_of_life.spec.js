@@ -2,17 +2,17 @@ describe('Game of Life', function () {
   var GoF = GameOfLife,
       canvas = $('<canvas></canvas>'),
       seed =
+        ".....*\n" +
         "......\n" +
-        "...*..\n" +
-        ".***..\n" +
         "......\n" +
-        "......\n",
+        "......\n" +
+        "...***\n",
       expectedHaltGeneration = GoF.Support.parseCellGrid(
+        "....**\n" +
         "......\n" +
-        "..**..\n" +
-        ".*..*.\n" +
-        "..**..\n" +
-        "......\n"),
+        "......\n" +
+        "....**\n" +
+        "*..*..\n"),
       expectedNumGenerations = 3,
       gfxDrawFrameSpy,
       gof;
