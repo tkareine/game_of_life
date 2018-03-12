@@ -3,8 +3,7 @@
 Written to serve as the basis for a JavaScript [Code
 Kata](http://en.wikipedia.org/wiki/Kata_\(programming\)).
 
-See it
-[running](http://tkareine.github.com/game_of_life/example/index.html).
+See it [running](https://tkareine.github.io/game_of_life/example/).
 
 If you want to do the Kata, please do not search for the implementation
 of the missing functionality. Try to solve it by yourself first.
@@ -19,7 +18,7 @@ well. The tests are located in
 and
 [test/integration](https://github.com/tkareine/game_of_life/tree/master/test/integration)
 directories. You can run the tests by opening [the test
-suite](http://tkareine.github.com/game_of_life/test/support/runner.html)
+suite](https://tkareine.github.io/game_of_life/test/support/runner.html)
 in your browser.
 
 [TDD](http://en.wikipedia.org/wiki/Test-driven_development) is a good
